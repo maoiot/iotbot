@@ -77,6 +77,9 @@ if __name__ == "__main__":
     bot_key = sys.argv[1]
     admin_id = sys.argv[2]
 
+    print('TOKEN: '+bot_key)
+    print('Admin ID:'+admin_id)
+    
     bot = telepot.aio.Bot(bot_key) 
     answerer = telepot.aio.helper.Answerer(bot)
 
