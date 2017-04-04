@@ -89,7 +89,10 @@ if __name__ == "__main__":
                                        'inline_query': on_inline_query,
                                        'chosen_inline_result': on_chosen_inline_result}))
     print('Listening ...')
-    telepot.Bot(bot_key).sendMessage(admin_id, '<b>Босс</b>, если что - я на месте...', 'HTML', reply_markup = ReplyKeyboardRemove())
+    try:
+        telepot.Bot(bot_key).sendMessage(admin_id, '<b>Босс</b>, если что - я на месте...', 'HTML', reply_markup = ReplyKeyboardRemove())
+    except:
+        print('Start chat before...') 
     GlobalStarting = True
     try:
         loop.run_forever()
